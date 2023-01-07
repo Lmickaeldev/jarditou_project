@@ -220,6 +220,33 @@ footer .logo {
   right: 35px;
 }
 
+/*tableau*/
+
+.tableau {
+  border: solid 4px #008322;
+  background-color: #f4f4f4;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 90px;
+  border-collapse: collapse;
+}
+.tableau body {
+  display: flex;
+  align-items: center;
+}
+
+tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+tbody tr:nth-child(even) {
+  background: #f4f4f4;
+}
+table,
+td {
+  border: 1px solid black;
+}
+
 @media screen and (max-width: 944px) {
   .menu-b {
     display: block;
