@@ -26,11 +26,18 @@
         <img src="assets/img/menu_icon.png" alt="" srcset="" class="menu-b" />
       </div>
     </header>
-
+<script>
+        const burger = document.querySelector(".menu-b")
+        const navLinks = document.querySelector(".nav-bar")
+ 
+        burger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+</script>
     <section id="tabl">
       <table class="tableau">
-        <tbody>
-          <tr>
+        <thead>
+                    <tr>
             <td><h3>ID</h3></td>
             <td><h3>Photos</h3></td>
             <td><h3>Categorie</h3></td>
@@ -38,6 +45,8 @@
             <td><h3>Prix</h3></td>
             <td><h3>couleur</h3></td>
           </tr>
+        </thead>
+        <tbody>
           <tr>
             <td>
               <img

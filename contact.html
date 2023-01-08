@@ -26,33 +26,44 @@
         <img src="assets/img/menu_icon.png" alt="" srcset="" class="menu-b" />
       </div>
     </header>
-
+<script>
+        const burger = document.querySelector(".menu-b")
+        const navLinks = document.querySelector(".nav-bar")
+ 
+        burger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+</script>
     <section id="contact">
       <p>*Ces zones sont obligatoires</p>
       <form action="destination.php" method="post" id="formulaire_contact">
-        <fieldset>
+        <fieldset class="coordonné">
           <legend>Vos coordonnées</legend>
           <label for="name">Votre nom*</label>
           <input type="text" name="name" />
-          <br />
+          
           <label for="nickname">Votre Prénom*</label>
           <input type="text" name="nickname" />
-          <br /><br />
-          <label for="sexe">sexe*</label>
+          <br />
+         <div class="sexe">
+           <label for="sexe">sexe*</label>
           <input type="radio" name="sexe" />Féminin
-          <input type="radio" name="sexe" />Masculin <br /><br />
+          <input type="radio" name="sexe" />Masculin
+         </div>
+          
+          <br /><br />
           <label for="date">Date de naissance*</label>
           <input type="date" name="ddn" id="date" />
-          <br />
+          
           <label for="codepost">Code postal*</label>
           <input type="text" name="codepost" />
-          <br />
+          
           <label for="codepost">Adresse : </label>
           <input type="text" name="Adresse" />
-          <br />
+          
           <label for="ville">ville : </label>
           <input type="text" name="codepost" />
-          <br />
+          
           <label for="nom">email* :</label>
           <input
             name="mail"
@@ -63,7 +74,7 @@
           />
         </fieldset>
 
-        <fieldset>
+        <fieldset class="coordonné">
           <legend>Votre demande</legend>
           <label for="requete">sujet* :</label>
           <select id="requete">
@@ -77,10 +88,11 @@
           <label for="requete">Votre question* :</label>
           <textarea name="ask"></textarea>
           <br /><br />
-          <input type="checkbox" name="accept" />
-          <label for="ville"
-            >*Jaccepte le traitement informatique de ce formulaire
-          </label>
+          
+          <div class="checkbox1"><label for="accces">
+            <input type="checkbox" name="accept" />
+            *Jaccepte le traitement informatique de ce formulaire
+          </label></div>
         </fieldset>
       </form>
     </section>
