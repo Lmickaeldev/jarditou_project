@@ -395,11 +395,17 @@ input[type="radio"] {
      th + td {
         padding-left: 10px;
     }
+    .coordonné{
+      width: 500px;
+    }
 }
 @media screen and (max-width: 590px) {
   .logo h1 {
     display: flex;
     flex-direction: column;
+  }
+  .coordonné{
+    width: 350px;
   }
  
 }
