@@ -67,7 +67,6 @@ header {
     padding-top: 58px;
 }
 
-.nav
 .nav-bar {
   margin-right: 20px;
   float: right;
@@ -268,6 +267,7 @@ td {
     flex-direction: column;
     width: 600px;
     margin: auto;
+    padding: 20px 0 ;
 }
 
 #contact p{
@@ -301,7 +301,7 @@ input[type="radio"] {
     font-weight: bold;
 }
 
-@media screen and (max-width: 944px) {
+@media screen and (max-width: 1025px) {
 
   .menu-b {
     display: block;
@@ -344,12 +344,6 @@ input[type="radio"] {
   footer {
     height: 50vh;
   }
-}
-@media screen and (max-width: 590px) {
-  .logo h1 {
-    display: flex;
-    flex-direction: column;
-  }
   .qualité
   {
     position: absolute;
@@ -358,6 +352,13 @@ input[type="radio"] {
     
 
   }
+}
+@media screen and (max-width: 590px) {
+  .logo h1 {
+    display: flex;
+    flex-direction: column;
+  }
+ 
 }
 
 
