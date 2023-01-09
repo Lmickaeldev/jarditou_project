@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -34,12 +34,12 @@
       <table class="tableau">
         <thead>
                     <tr>
-            <td><h3>ID</h3></td>
-            <td><h3>Photos</h3></td>
-            <td><h3>Categorie</h3></td>
-            <td><h3>Libellé</h3></td>
-            <td><h3>Prix</h3></td>
-            <td><h3>couleur</h3></td>
+            <th><h3>ID</h3></th>
+            <th><h3>Photos</h3></th>
+            <th><h3>Categorie</h3></th>
+            <th><h3>Libellé</h3></th>
+            <th><h3>Prix</h3></th>
+            <th><h3>couleur</h3></th>
           </tr>
         </thead>
         <tbody>
@@ -126,12 +126,19 @@
             <li><a href="#">Plan du site</a></li>
           </ul>
         </nav>
-        <a class="logo" href="#"
-          ><h1>
-            jarditou<span class="qualité">la qualité depuis 70 ans</span>
-          </h1></a
-        >
+        <a class="logo" href="#"><h1>jarditou</h1><p class="qualité">la qualité depuis 70 ans</p></a>
       </div>
     </footer>
+    <!-- script source exterieurs-->
+    <script>
+      document.querySelectorAll('.tableau').forEach(function (table) {
+    let labels = Array.from(table.querySelectorAll('th')).map(function (th) {
+        return th.innerText
+    })
+    table.querySelectorAll('td').forEach(function (td, i) {
+        td.setAttribute('data-label', labels[i % labels.length])
+    })
+})
+    </script>
   </body>
 </html>
