@@ -20,7 +20,7 @@
               </ul>
           
           </nav>
-          <img src="assets/img/menu_icon.png" alt="" srcset="" class="menu-b">
+          <img src="assets/img/menu_icon.png" alt="icone-menu"  class="menu-b">
       </div>
       
   </header>
@@ -36,17 +36,18 @@
       <p>*Ces zones sont obligatoires</p>
       <form action="destination.php" method="post" id="formulaire_contact">
         <fieldset class="coordonné">
-          <legend>Vos coordonnées</legend>
-          <label for="name">Votre nom*</label>
-          <input type="text" name="name" />
+          <legend><h3>Vos coordonnées</h3></legend>
+          <label for="name" >Votre nom*</label>
+          <input type="text" name="name" id="name" />
           
           <label for="nickname">Votre Prénom*</label>
-          <input type="text" name="nickname" />
+          <input type="text" name="nickname" id="nickname"/>
           <br />
-         <div class="sexe">
-           <label for="sexe">sexe*</label>
-          <input type="radio" name="sexe" />Féminin
-          <input type="radio" name="sexe" />Masculin
+         <div class="sex">
+           <input type="radio" id="féminin" name="sexe" value="féminin">
+          <label for="féminin">Féminin</label>
+          <input type="radio" id="masculin" name="sexe" value="masculin">
+          <label for="masculin">Masculin</label>
          </div>
           
           <br /><br />
@@ -54,18 +55,19 @@
           <input type="date" name="ddn" id="date" />
           
           <label for="codepost">Code postal*</label>
-          <input type="text" name="codepost" />
+          <input type="text" name="codepost" id="codepost"/>
           
-          <label for="codepost">Adresse : </label>
-          <input type="text" name="Adresse" />
+          <label for="Adress">Adresse : </label>
+          <input type="text" name="Adress" id="Adress" />
           
           <label for="ville">ville : </label>
-          <input type="text" name="codepost" />
+          <input type="text" name="ville" id="ville" />
           
-          <label for="nom">email* :</label>
+          <label for="mail">email* :</label>
           <input
             name="mail"
             type="email"
+            id="mail"
             placeholder="dave.loper@afpa.fr"
             required
             autofocus
@@ -73,7 +75,7 @@
         </fieldset>
 
         <fieldset class="coordonné">
-          <legend>Votre demande</legend>
+          <legend><h3>Votre demande</h3></legend>
           <label for="requete">sujet* :</label>
           <select id="requete">
             <option value="" selected>Veuillez séléctionner un sujet</option>
@@ -87,10 +89,11 @@
           <textarea name="ask"></textarea>
           <br /><br />
           
-          <div class="checkbox1"><label for="accces">
-            <input type="checkbox" name="accept" />
-            *Jaccepte le traitement informatique de ce formulaire
-          </label></div>
+          <div class="checkbox1">
+            <label for="acces"></label>
+          <input type="checkbox" name="accept" id="acces" />
+          * Jaccepte le traitement informatique de ce formulaire
+        </div>
         </fieldset>
       </form>
     </section>
